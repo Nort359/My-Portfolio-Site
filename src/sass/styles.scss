@@ -1,0 +1,55 @@
+/* Сброс значений по умолчанию */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.7;
+    color: #777;
+}
+
+/* Header */
+.header {
+    height: 100vh;
+    background-image: url(../img/startImage.jpg);
+    background-size: cover;
+    background-position: top;
+
+    /* Логотип */
+    &__logo-box {
+        position: absolute;
+        top: 30px;
+        left: 30px;
+    }
+
+    /* Текст по центру */
+    &__text {
+        color: #fff;
+
+        &-box {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+
+        &-main {
+            display: block;
+            font-size: 60px;
+        }
+
+        &-sub {
+            display: block;
+            font-size: 26px;
+        }
+    }
+}
+

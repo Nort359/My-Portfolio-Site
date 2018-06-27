@@ -1,0 +1,40 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700);@charset "UTF-8";
+/* Сброс значений по умолчанию */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #777; }
+
+/* Header */
+.header {
+  height: 100vh;
+  background-image: url(img/startImage.jpg);
+  background-size: cover;
+  background-position: top;
+  /* Логотип */
+  /* Текст по центру */ }
+  .header__logo-box {
+    position: absolute;
+    top: 30px;
+    left: 30px; }
+  .header__text {
+    color: #fff; }
+    .header__text-box {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center; }
+    .header__text-main {
+      display: block;
+      font-size: 60px; }
+    .header__text-sub {
+      display: block;
+      font-size: 26px; }
