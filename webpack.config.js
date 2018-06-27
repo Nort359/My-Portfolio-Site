@@ -24,18 +24,14 @@ module.exports = {
         new UglifyJsPlugin(),
         new HTMLWebpackPlugin({
             title: "Личный Сайт Web-разработчика | Просвиркин Максим",
-            /*
             minify: {
                 html5: true
             },
             template: './template.html'
-            */
         })
     ],
 
-    
-
     devtool: 'eval-souse-map',
 
-    watch: false
+    watch: true
 };
