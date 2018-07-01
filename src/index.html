@@ -7,17 +7,31 @@
     <title>Личный Сайт Web-разработчика | Просвиркин Максим</title>
 </head>
 <body>
+    <!-- Начальный экран -->
     <header class="header">
-        <div class="header__logo-box">
-            <img class="header__logo" src="img/logo.png" alt="logo">
-        </div>
+        <div class="header__menu">
+            <!-- Лого -->
+            <div class="header__logo-box">
+                <img class="header__logo" src="img/logo.png" alt="logo">
+            </div>
 
+            <!-- Меню -->
+            <ul class="header__menu-box">
+                <a href="#" class="header__menu-link_active"><li>Главная</li></a>
+                <a href="#"><li>Обо мне</li></a>
+                <a href="#"><li>Мои работы</li></a>
+                <a href="#"><li>Резюме</li></a>
+                <a href="#"><li>Контакты</li></a>
+            </ul>
+        </div>
+        
+        <!-- Текст, находящийся по середине экрана -->
         <div class="header__text-box">
-            <h1 class="header__text">
+            <div class="header__text">
                 <span class="header__text-main">Максим Просвиркин</span>
                 <span class="header__text-sub">Full-Stack Web-разработчик</span>
                 <span class="header__text-sub">Личный веб сайт</span>
-            </h1>
+            </div>
         </div>
     </header>
 </body>

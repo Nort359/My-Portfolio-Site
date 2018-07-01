@@ -1,6 +1,8 @@
 /* Сброс значений по умолчанию */
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
 
+@import "variables";
+
 * {
     margin: 0;
     padding: 0;
@@ -8,11 +10,11 @@
 }
 
 body {
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 400;
-    font-size: 16px;
+    font-family: $fontFamily;
+    font-weight: $fornWeight;
+    font-size: $fontSize;
     line-height: 1.7;
-    color: #777;
+    color: $fontColor;
 }
 
 /* Header */
@@ -20,18 +22,49 @@ body {
     height: 100vh;
     background-image: url(../img/startImage.jpg);
     background-size: cover;
-    background-position: top;
+    background-position: top center;
+
+    /* Меню */
+    &__menu {
+        &-box {
+            height: 100px;
+            font-size: 20px;
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
+            display: inline-block;
+
+            a {
+                text-decoration: none;
+                color: $whiteColor;
+                position: relative;
+                margin: 0;
+                padding: 0;
+            }
+            
+            li {
+                display: inline-block;
+                list-style: none;
+                clear: both;
+                padding: 30px;
+            }
+        }
+        
+        &-link_active {
+            color: $mainColor;
+        }
+    }
 
     /* Логотип */
     &__logo-box {
         position: absolute;
         top: 30px;
-        left: 30px;
+        left: 135px;
     }
 
     /* Текст по центру */
     &__text {
-        color: #fff;
+        color: $whiteColor;
 
         &-box {
             position: absolute;
