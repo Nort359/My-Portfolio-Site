@@ -12,50 +12,60 @@ body {
   line-height: 1.7;
   color: #777; }
 
-/* Header */
 .header {
+  display: flex;
+  flex-direction: column;
   height: 100vh;
   background-image: url(img/startImage.jpg);
   background-size: cover;
   background-position: top center;
-  /* Меню */
-  /* Логотип */
   /* Текст по центру */ }
-  .header__menu-box {
-    height: 100px;
-    font-size: 20px;
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
-    display: inline-block; }
-    .header__menu-box a {
-      text-decoration: none;
-      color: #fff;
-      position: relative;
-      margin: 0;
-      padding: 0; }
-    .header__menu-box li {
-      display: inline-block;
-      list-style: none;
-      clear: both;
-      padding: 30px; }
-  .header__menu-link_active {
-    color: #00b0f7; }
   .header__logo-box {
-    position: absolute;
-    top: 30px;
-    left: 135px; }
+    margin-top: 15px; }
+  .header__menu {
+    display: flex;
+    margin: 0 135px;
+    font-size: 20px;
+    -webkit-justify-content: space-between;
+    /* Safari */
+    justify-content: space-between;
+    /* Цвет активной ссылки */ }
+    .header__menu ul {
+      margin: auto;
+      display: flex;
+      /* Анимация к ссылкам */ }
+      .header__menu ul li {
+        list-style: none; }
+      .header__menu ul a {
+        margin: auto;
+        color: #fff;
+        text-decoration: none;
+        margin-left: 50px;
+        position: relative;
+        /* Для добавления контента :after */
+        transition: color .2s ease-in; }
+      .header__menu ul a:after {
+        content: "";
+        position: absolute;
+        height: 2px;
+        width: 100%;
+        background-color: #00b0f7;
+        transform: scaleX(0);
+        transition: transform .2s ease-in; }
+      .header__menu ul a:hover {
+        color: #00b0f7; }
+      .header__menu ul a:hover:after {
+        transform: scaleX(1); }
+    .header__menu-link_active {
+      color: #00b0f7 !important; }
   .header__text {
     color: #fff; }
     .header__text-box {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
+      margin: auto;
       text-align: center; }
     .header__text-main {
-      display: block;
-      font-size: 60px; }
+      font-size: 60px;
+      display: block; }
     .header__text-sub {
-      display: block;
-      font-size: 26px; }
+      font-size: 26px;
+      display: block; }

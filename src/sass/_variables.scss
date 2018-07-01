@@ -1,10 +1,13 @@
+/* Font settings */
 $fornWeight: 400;
 $fontSize: 18px;
 $fontFamily: 'Open Sans', sans-serif;
 
+/* Color settings */
 $fontColor: #777;
 $whiteColor: #fff;
 $mainColor: #00b0f7;
 
-$width1920px: 1920px;
-$spaces1920px: 270px;
+/* General settings */
+$width1920px: 1920px; /* Container size */
+$spaces1920px: 270px; /* Space in the container */
