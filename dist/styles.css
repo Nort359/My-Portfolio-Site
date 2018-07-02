@@ -1,5 +1,9 @@
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700);@charset "UTF-8";
-/* Сброс значений по умолчанию */
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700);/* Font settings */
+/* Color settings */
+/* General settings */
+/* Container size */
+/* Space in the container */
+/* Reset default values */
 * {
   margin: 0;
   padding: 0;
@@ -12,28 +16,38 @@ body {
   line-height: 1.7;
   color: #777; }
 
+/* --- A start screen --- */
 .header {
+  display: -webkit-flex;
+  /* Safari */
   display: flex;
   flex-direction: column;
   height: 100vh;
-  background-image: url(img/startImage.jpg);
+  background-image: url(img/startImage2.jpg);
+  /* Background image */
   background-size: cover;
   background-position: top center;
-  /* Текст по центру */ }
+  /* Logo styles */
+  /* Menu styles */
+  /* Text in the middle of screen */ }
   .header__logo-box {
     margin-top: 15px; }
   .header__menu {
+    display: -webkit-flex;
+    /* Safari */
     display: flex;
     margin: 0 135px;
     font-size: 20px;
     -webkit-justify-content: space-between;
     /* Safari */
     justify-content: space-between;
-    /* Цвет активной ссылки */ }
+    /* Active link`s style */ }
     .header__menu ul {
       margin: auto;
+      display: -webkit-flex;
+      /* Safari */
       display: flex;
-      /* Анимация к ссылкам */ }
+      /* Animation for links (an underline) */ }
       .header__menu ul li {
         list-style: none; }
       .header__menu ul a {
@@ -42,22 +56,24 @@ body {
         text-decoration: none;
         margin-left: 50px;
         position: relative;
-        /* Для добавления контента :after */
+        /* For adding content :after */
         transition: color .2s ease-in; }
       .header__menu ul a:after {
         content: "";
         position: absolute;
         height: 2px;
         width: 100%;
-        background-color: #00b0f7;
+        background-color: #4EC2F8;
         transform: scaleX(0);
         transition: transform .2s ease-in; }
       .header__menu ul a:hover {
-        color: #00b0f7; }
+        color: #4EC2F8; }
       .header__menu ul a:hover:after {
         transform: scaleX(1); }
     .header__menu-link_active {
-      color: #00b0f7 !important; }
+      color: #4EC2F8 !important; }
+    .header__menu-link_active:after {
+      transform: scaleX(1) !important; }
   .header__text {
     color: #fff; }
     .header__text-box {

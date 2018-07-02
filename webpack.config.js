@@ -102,11 +102,10 @@ module.exports = {
 
     devtool: 'eval-souse-map',
 
-    /*
+    
     devServer: {
         hot: true
     },
-    */
 
     watch: true
 };
