@@ -1,65 +1,5 @@
 /* My works block */
 
-@mixin information-block($padding: 1.5rem) {
-    text-align: justify;
-    padding: $padding;
-    text-indent: 30px;
-}
-
-@keyframes showFromLeft {
-    0% {
-        transform: translateX(-50rem);
-        opacity: 0;
-    }
-    50% {
-        opacity: 1;
-        transform: translateX(0);
-    }
-    75% {
-        opacity: 1;
-        transform: translateX(-2rem);
-    }
-    100% {
-        transform: translateX(0);
-    }
-}
-
-@keyframes showFromRight {
-    0% {
-        transform: translateX(50rem);
-        opacity: 0;
-    }
-    50% {
-        opacity: 1;
-        transform: translateX(0);
-    }
-    75% {
-        opacity: 1;
-        transform: translateX(2rem);
-    }
-    100% {
-        transform: translateX(0);
-    }
-}
-
-@keyframes hideToRight {
-    0% {
-        transform: translateY(0);
-        opacity: 1;
-    }
-    
-    100% {
-        opacity: 0;
-        transform: translateY(50rem);
-    }
-}
-
-.active_screen {
-    opacity: 1 !important;
-    animation: showFromLeft 1s ease-in !important;
-    left: 0 !important;
-}
-
 .works {
     justify-content: space-between;
     height: 32rem;
@@ -79,6 +19,12 @@
         transition: all .5s ease-in;
         opacity: 0;
         animation: hideToRight 1s ease-in;
+
+        &-active {
+            opacity: 1 !important;
+            animation: showFromLeft 1s ease-in !important;
+            left: 0 !important;
+        }
 
         &__container {
             position: relative;
@@ -118,10 +64,6 @@
             transform: scale(.95);
         }
     }
-    .active_description {
-        opacity: 1 !important;
-        animation: showFromRight 1s ease-in !important;
-    }
 
     &__description {
         @include information-block();
@@ -131,6 +73,11 @@
         transition: all .5s ease-in;
         opacity: 0;
         animation: hideToRight 1s ease-in;
+
+        &-active {
+            opacity: 1 !important;
+            animation: showFromRight 1s ease-in !important;
+        }
 
         &__container {
             position: relative;

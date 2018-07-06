@@ -5,3 +5,9 @@
         clear: both;
     }
 }
+
+@mixin information-block($padding: 1.5rem) {
+    text-align: justify;
+    padding: $padding;
+    text-indent: 30px;
+}
