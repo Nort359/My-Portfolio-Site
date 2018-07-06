@@ -1,5 +1,7 @@
 /* Карусель */
 
+const [fontColor, mainColor] = ["#232323", "#4EC2F8"];
+
 const [worksScreens, worksDescription, indicators] = [
     document.getElementsByClassName("works__screens"),
     document.getElementsByClassName("works__description"),
@@ -20,29 +22,22 @@ for (let i = 0; i < indicators.length; i++) {
     indicators[i].addEventListener("click", function() {
         let id = this.getAttribute("data-id");
         
+        /* Снимаем предыдущие интерфалы */
+        clearInterval(screenCarousel);
+        clearInterval(descriptionCarousel);
+        clearInterval(indicatorsCarousel);
 
+        /* Анимируем необходимый элемент */
+        initializeCarousel(worksScreens, id, "active_screen")();
+        initializeCarousel(worksDescription, id, "active_description")();
+        initializeCarousel(indicators, id, "works__indicators_dot-active")();
+
+        /* Снова запускаем интервалы */
+        screenCarousel = setInterval(initializeCarousel(worksScreens, +id + 1, "active_screen"), carouselTick);
+        descriptionCarousel = setInterval(initializeCarousel(worksDescription, +id + 1, "active_description"), carouselTick);
+        indicatorsCarousel = setInterval(initializeCarousel(indicators, +id + 1, "works__indicators_dot-active"), carouselTick);
     });
 }
-
-let next = 1;
-let previous = 0;
-
-/*
-function checkIndicators(next, previous) {
-    let n = next >= elements.length ? 0 : next;
-    let prev = previous;
-
-    if (n === 0) {
-        prev = elements.length - 1;
-    }
-
-    if (next === elements.length - 1) {
-        prev = elements.length - 2;
-    }
-
-    return [n, prev];
-}
-*/
 
 /**
  * Функция для старта карасели
@@ -51,30 +46,27 @@ function checkIndicators(next, previous) {
  * @param {string} className Название класса, анимарующий карусель
  */
 function initializeCarousel(elements, current = 1, className) {
+    let elems = elements;
+    
     let next = current;
-    let previous = next - 1;
+    next = next >= elems.length ? 0 : next;
 
     return () => {
-        elements[previous].classList.remove(className);
-        elements[next].classList.add(className);
+        for (let i = 0; i < elems.length; i++) {
+            elems[i].classList.remove(className);
+        }
+
+        elems[next].classList.add(className);
 
         next++;
-        previous = next - 1;
-
-        next = next >= elements.length ? 0 : next;
-
-        if (next === 0) {
-            previous = elements.length - 1;
-        }
-
-        if (next >= elements.length - 1) {
-            previous = elements.length - 2;
-        }
+        
+        next = next >= elems.length ? 0 : next;
     };
 }
 
 const carouselTick = 3000;
 
 /* Запускаем карусель */
-setInterval(initializeCarousel(worksScreens, 1, "active_screen"), carouselTick);
-setInterval(initializeCarousel(worksDescription, 1, "active_description"), carouselTick);
+let screenCarousel = setInterval(initializeCarousel(worksScreens, 1, "active_screen"), carouselTick);
+let descriptionCarousel = setInterval(initializeCarousel(worksDescription, 1, "active_description"), carouselTick);
+let indicatorsCarousel = setInterval(initializeCarousel(indicators, 1, "works__indicators_dot-active"), carouselTick);
