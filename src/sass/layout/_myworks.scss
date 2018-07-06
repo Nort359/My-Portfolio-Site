@@ -1,0 +1,178 @@
+/* My works block */
+
+@mixin information-block($padding: 1.5rem) {
+    text-align: justify;
+    padding: $padding;
+    text-indent: 30px;
+}
+
+@keyframes showFromLeft {
+    0% {
+        transform: translateX(-50rem);
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    75% {
+        opacity: 1;
+        transform: translateX(-2rem);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes showFromRight {
+    0% {
+        transform: translateX(50rem);
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    75% {
+        opacity: 1;
+        transform: translateX(2rem);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes hideToRight {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    
+    100% {
+        opacity: 0;
+        transform: translateY(50rem);
+    }
+}
+
+.active_screen {
+    opacity: 1 !important;
+    animation: showFromLeft 1s ease-in !important;
+    left: 0 !important;
+}
+
+.works {
+    justify-content: space-between;
+    height: 32rem;
+
+    &-container {
+        text-align: center;
+        margin: 30px auto;
+    }
+
+    &__screens {
+        @include information-block();
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        transition: all .5s ease-in;
+        opacity: 0;
+        animation: hideToRight 1s ease-in;
+
+        &__container {
+            position: relative;
+        }
+
+        &__img {
+            position: absolute;
+            width: 55%;
+            box-shadow: 0 1.5rem 4rem rgba($fontColor, .4);
+            outline-offset: 2rem;
+            transition: all .2s ease-in;
+
+            &--1 {
+                top: -2rem;
+                left: 0;
+            }
+
+            &--2 {
+                top: 2rem;
+                right: 0;
+            }
+
+            &--3 {
+                top: 10rem;
+                left: 20%;
+            }
+            
+            &:hover {
+                outline: 1.5rem solid $mainColor;
+                transform: scale(1.05) translateY(-.5rem);
+                box-shadow: 0 2.5rem 4rem rgba($fontColor, .5);
+                z-index: 20;
+            }
+        }
+
+        &:hover &__img:not(:hover) {
+            transform: scale(.95);
+        }
+    }
+    .active_description {
+        opacity: 1 !important;
+        animation: showFromRight 1s ease-in !important;
+    }
+
+    &__description {
+        @include information-block();
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: all .5s ease-in;
+        opacity: 0;
+        animation: hideToRight 1s ease-in;
+
+        &__container {
+            position: relative;
+        }
+
+        &_header {
+            font-size: 1.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        &_paragraph {
+            font-size: 1.8rem;
+            
+            &:not(:last-child) {
+                margin-bottom: 3rem;
+            }
+        }
+    }
+    
+    /* Индикаторы переключения слайдов карусели */
+
+    &__indicators {
+        margin: 0 auto;
+
+        &_dot {
+            display: inline-block;
+            width: 2rem;
+            height: 2rem;
+            background-color: $fontColor;
+            border-radius: 50%;
+            margin-right: 1rem;
+            transition: all .2s ease-in-out;
+
+            &:hover {
+                border: .5rem solid $mainColor;
+            }
+
+            &-active {
+                background-color: $mainColor;
+                transform: scale(1.2);
+            }
+        }
+    }
+}

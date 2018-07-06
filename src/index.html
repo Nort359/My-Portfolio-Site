@@ -35,20 +35,137 @@
         </div>
     </header>
 
-    <!-- Блок Мои работы -->
-    <div class="works-container">
-        <h1>Мои работы</h1>
-        <div class="works">
-            <div class="works__screens">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, rem? Fugit modi eaque error nihil totam vitae magnam?
-                Sunt eius reiciendis quis dolor modi blanditiis dolores. Illum quae minus enim.
+    <!--
+    <div class="grid-test">
+        <div class="row">
+            <div class="col-1-of-2">
+                Col 1 of 2
             </div>
-
-            <div class="works__description">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure qui vel debitis eos, non voluptates provident, veniam laborum
-                magnam obcaecati illum error delectus sequi necessitatibus repellat perferendis temporibus tempore optio.
+            <div class="col-1-of-2">
+                Col 1 of 2
             </div>
         </div>
+
+        <div class="row">
+            <div class="col-1-of-3">
+                Col 1 of 3
+            </div>
+            <div class="col-1-of-3">
+                Col 1 of 3
+            </div>
+            <div class="col-1-of-3">
+                Col 1 of 3
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-1-of-3">
+                Col of 3
+            </div>
+            <div class="col-2-of-3">
+                Col 2 of 3
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-1-of-4">
+                Col 1 of 4
+            </div>
+            <div class="col-1-of-4">
+                Col 1 of 4
+            </div>
+            <div class="col-1-of-4">
+                Col 1 of 4
+            </div>
+            <div class="col-1-of-4">
+                Col 1 of 4
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-1-of-4">
+                Col 1 of 4
+            </div>
+            <div class="col-3-of-4">
+                Col 3 of 4
+            </div>
+        </div>
+
     </div>
+    -->
+
+    <!-- Блок Мои работы -->
+    <main class="works-container">
+        <div class="row">
+            <h2 class="heading">Мои работы</h2>
+        </div>
+
+        <div class="works">
+            <div class="row">
+                <!-- Изображение моих работ -->
+                <div class="col-1-of-2 works__screens__container">
+                    <div class="works__screens active_screen">
+                        <img class="works__screens__img works__screens__img--1" src="img/Screenshot_1.jpg" alt="">
+                        <img class="works__screens__img works__screens__img--2" src="img/Screenshot_2.jpg" alt="">
+                        <img class="works__screens__img works__screens__img--3" src="img/Screenshot_3.jpg" alt="">
+                    </div>
+                    <div class="works__screens">
+                        <img class="works__screens__img works__screens__img--1" src="img/Screenshot_1.jpg" alt="">
+                        <img class="works__screens__img works__screens__img--2" src="img/Screenshot_2.jpg" alt="">
+                        <img class="works__screens__img works__screens__img--3" src="img/Screenshot_3.jpg" alt="">
+                    </div>
+                    <div class="works__screens">
+                        <img class="works__screens__img works__screens__img--1" src="img/Screenshot_1.jpg" alt="">
+                        <img class="works__screens__img works__screens__img--2" src="img/Screenshot_2.jpg" alt="">
+                        <img class="works__screens__img works__screens__img--3" src="img/Screenshot_3.jpg" alt="">
+                    </div>
+                </div>
+                
+                <!-- Описание к моим работам -->
+                <div class="col-1-of-2 works__description__container">
+                    <div class="works__description active_description">
+                        <div class="works__description_header">
+                            Test
+                        </div>
+
+                        <div class="works__description_paragraph">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure qui vel debitis eos, non voluptates provident, veniam laborum
+                            magnam obcaecati illum error delectus sequi necessitatibus repellat perferendis temporibus tempore optio.
+                        </div>
+                    </div>
+                    
+                    <div class="works__description">
+                        <div class="works__description_header">
+                            Test
+                        </div>
+                    
+                        <div class="works__description_paragraph">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure qui vel debitis eos, non voluptates provident, veniam laborum
+                            magnam obcaecati illum error delectus sequi necessitatibus repellat perferendis temporibus tempore optio.
+                        </div>
+                    </div>
+
+                    <div class="works__description">
+                        <div class="works__description_header">
+                            Test
+                        </div>
+                    
+                        <div class="works__description_paragraph">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure qui vel debitis eos, non voluptates provident, veniam laborum
+                            magnam obcaecati illum error delectus sequi necessitatibus repellat perferendis temporibus tempore optio.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="works__indicators">
+                <div class="works__indicators_dot works__indicators_dot-active" data-id="0"></div>
+                <div class="works__indicators_dot" data-id="1"></div>
+                <div class="works__indicators_dot" data-id="2"></div>
+            </div>
+        </div>
+    </main>
 </body>
 </html>

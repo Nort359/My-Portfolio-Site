@@ -1,16 +1,15 @@
-import "./sass/styles.scss";
+import typingText from "../functions/typingFunction";
 
-import typingText from "./typing";
+/* Анимация печати стартового текста */
 
-const tick = 30;
+const tick = 30; // Время на печать одного символа
 
 const [mainText, subText] = [
     document.querySelector(".header__text-main"),
     document.getElementsByClassName("header__text-sub") /* Массив */
 ]; /* Деструктивное присваивание */
 
-const elements = [
-    {
+const elements = [{
         node: mainText,
         message: mainText.innerHTML
     },
@@ -31,5 +30,3 @@ for (let item of elements) {
     typingText(item.message, item.node, tick, delay); // Запускаем асинхронное печатание
     delay += item.message.length * tick;
 }
-
-

@@ -1,0 +1,23 @@
+/* Reset default values */
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    // This defines what 1rem is
+    font-size: 62.5%;
+}
+
+body {
+    font-family: $fontFamily;
+    font-weight: $fornWeight;
+    font-size: $fontSize;
+    line-height: 1.7;
+    color: $fontColor;
+    box-sizing: border-box;
+}

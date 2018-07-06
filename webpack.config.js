@@ -14,7 +14,7 @@ let env = "development";
 module.exports = {
     context: PATHS.src,
 
-    entry: './index',
+    entry: './js/index',
 
     output: {
         filename: './bundle.js',

@@ -1,152 +1,77 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
-
-@import "variables";
-
-/* Reset default values */
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: $fontFamily;
-    font-weight: $fornWeight;
-    font-size: $fontSize;
-    line-height: 1.7;
-    color: $fontColor;
-}
-
-/* --- A start screen block --- */
+/* --- A start screen block HEADER --- */
 
 .header {
     display: flex;
     flex-direction: column;
-
     height: 100vh;
-
-    background-image: url(../img/startImage2.jpg); /* Background image */
+    background-image: url(../img/startImage2.jpg);
+    /* Background image */
     background-size: cover;
     background-position: top center;
-
     /* Logo styles */
-
     &__logo-container {
-        margin-top: 15px;
+        margin-top: 1.5rem;
     }
-
     /* Menu styles */
-
     &__menu {
         display: flex;
-
-        margin: 0 135px;
-        font-size: 20px;
-
+        margin: 0 13.5rem;
+        font-size: 2rem;
         justify-content: space-between;
-
         ul {
             margin: auto;
-
             display: flex;
-
             li {
                 list-style: none;
             }
-
             a {
                 margin: auto;
                 color: $whiteColor;
                 text-decoration: none;
-                margin-left: 50px;
-
-                position: relative; /* For adding content :after */
-
+                margin-left: 5rem;
+                position: relative;
+                /* For adding content :after */
                 transition: color .2s ease-in;
             }
-
             /* Animation for links (an underline) */
-
             a:after {
                 content: "";
-
                 position: absolute;
-                height: 2px;
+                height: .2rem;
                 width: 100%;
-
                 background-color: $mainColor;
-
                 transform: scaleX(0);
                 transition: transform .2s ease-in;
             }
-
             a:hover {
                 color: $mainColor;
             }
-
             a:hover:after {
                 transform: scaleX(1);
             }
-
         }
-
         /* Active link`s style */
-
         &-link_active {
             color: $mainColor !important;
         }
-
         &-link_active:after {
             transform: scaleX(1) !important;
         }
     }
-
     /* Text in the middle of screen */
-
     &__text {
         color: $whiteColor;
-
         &-container {
             margin: auto;
             text-align: center;
         }
-
         &-main {
-            font-size: 60px;
+            font-size: 6rem;
             display: block;
         }
-        
         &-sub {
-            font-size: 26px;
+            font-size: 2.6rem;
             display: block;
         }
     }
-}
-
-/* My works block */
-
-@mixin information-block($padding: 15px) {
-    text-align: justify;
-    padding: $padding;
-    text-indent: 30px;
-}
-
-.works {
-    display: flex;
-    justify-content: space-between;
-
-    &-container {
-        text-align: center;
-        margin: 30px 135px;
-    }
-
-    &__screens {
-        @include information-block();
-    }
-
-    &__description {
-        @include information-block();
-    }
-    
 }
