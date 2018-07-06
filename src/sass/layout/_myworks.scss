@@ -70,13 +70,14 @@
         position: absolute;
         top: 0;
         left: 0;
-        transition: all .5s ease-in;
+        transition: opacity .1s ease-in;
         opacity: 0;
         animation: hideToRight 1s ease-in;
 
         &-active {
             opacity: 1 !important;
             animation: showFromRight 1s ease-in !important;
+            right: 0 !important;
         }
 
         &__container {
@@ -86,7 +87,9 @@
         &_header {
             font-size: 1.8rem;
             font-weight: 700;
+
             text-transform: uppercase;
+            text-align: center;
         }
 
         &_paragraph {
@@ -95,6 +98,10 @@
             &:not(:last-child) {
                 margin-bottom: 3rem;
             }
+        }
+
+        &__btns {
+            text-align: center;
         }
     }
     
