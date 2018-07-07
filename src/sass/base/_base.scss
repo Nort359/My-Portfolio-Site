@@ -21,3 +21,10 @@ body {
     color: $fontColor;
     box-sizing: border-box;
 }
+
+@media only screen and (max-width: 400px) {
+    html {
+        // This defines what 1rem is
+        font-size: 55%;
+    }
+}

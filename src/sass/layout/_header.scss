@@ -75,3 +75,14 @@
         }
     }
 }
+
+@media only screen and (max-width: 1040px) {
+    .header {
+        /* Menu styles */
+        &__menu {
+            ul {
+                display: none;
+            }
+        }
+    }
+}

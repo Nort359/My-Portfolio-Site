@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
 
+/* Подключение Bootstrap сетки */
+@import "../../node_modules/bootstrap/scss/bootstrap-reboot";
+@import "../../node_modules/bootstrap/scss/grid";
+
 @import "abstracts/variables";
 @import "abstracts/mixins";
 @import "abstracts/keyframes";
@@ -9,8 +13,10 @@
 @import "components/heading";
 @import "components/btn";
 
-@import "layout/grid";
+/* @import "layout/grid"; */
+@import "layout/scrollbar";
 
 @import "pages/home";
 
+@include scrollbars(.5em, slategray);
 

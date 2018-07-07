@@ -1,0 +1,124 @@
+.about {
+    background-color: $fontColor;
+    color: $whiteColor;
+    width: 100%;
+    height: 48rem;
+    margin-top: 8rem;
+    margin-bottom: 50rem;
+
+    &__container {
+        position: relative;
+        overflow: hidden;
+        height: inherit;
+        width: inherit;
+    }
+
+    &__description {
+        @include information-block();
+
+        &__header-main {
+            margin: 1.5rem auto;
+            text-align: center;
+            font-size: $headerFontSize;
+            color: $mainColor;
+        }
+
+        &__header-sub {
+            margin: 1.5rem auto;
+            text-align: center;
+            font-size: 2rem;
+            color: $mainColor;
+        }
+
+        &__technology {
+
+            &__container {
+                text-indent: 0;
+                float: left;
+                margin-right: 5rem;
+            }
+
+            &__marker {
+                display: inline-block;
+
+                width: 1.5rem;
+                height: 1.5rem;
+
+                border-radius: 50%;
+
+                margin-right: 2rem;
+
+                background-color: $mainColor;
+            }
+
+            &__title {
+                color: darken($color: $whiteColor, $amount: 30%);
+            }
+        }
+    }
+
+    &__photo {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 50%;
+        top: 0;
+
+        overflow: hidden;
+
+        -webkit-clip-path: polygon(12% 0, 100% 0%, 100% 100%, 0% 100%);
+        clip-path: polygon(12% 0, 100% 0%, 100% 100%, 0% 100%);
+
+        img {
+            height: 100%;
+        }
+    }
+}
+
+
+@media only screen and (max-width: 1200px) {
+    .about {
+        height: 55rem;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .about {
+        height: 95rem;
+
+        &__photo {
+            position: absolute;
+            height: 50%;
+            left: 0;
+            top: 50%;
+
+            overflow: hidden;
+
+            clip-path: none;
+        }
+    }
+}
+
+@media only screen and (max-width: 534px) {
+    .about {
+        height: 105rem;
+    }
+}
+
+@media only screen and (max-width: 490px) {
+    .about {
+        height: 110rem;
+    }
+}
+
+@media only screen and (max-width: 457px) {
+    .about {
+        height: 125rem;
+    }
+}
+
+@media only screen and (max-width: 430px) {
+    .about {
+        height: 135rem;
+    }
+}

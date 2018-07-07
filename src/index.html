@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Личный Сайт Web-разработчика | Просвиркин Максим</title>
+    <link rel="shortcut icon" type="image/png" href="img/favicon.png">
 </head>
 <body>
     <!-- Блок Начальный экран -->
@@ -35,67 +36,8 @@
         </div>
     </header>
 
-    <!--
-    <div class="grid-test">
-        <div class="row">
-            <div class="col-1-of-2">
-                Col 1 of 2
-            </div>
-            <div class="col-1-of-2">
-                Col 1 of 2
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-1-of-3">
-                Col 1 of 3
-            </div>
-            <div class="col-1-of-3">
-                Col 1 of 3
-            </div>
-            <div class="col-1-of-3">
-                Col 1 of 3
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-1-of-3">
-                Col of 3
-            </div>
-            <div class="col-2-of-3">
-                Col 2 of 3
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-1-of-4">
-                Col 1 of 4
-            </div>
-            <div class="col-1-of-4">
-                Col 1 of 4
-            </div>
-            <div class="col-1-of-4">
-                Col 1 of 4
-            </div>
-            <div class="col-1-of-4">
-                Col 1 of 4
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-1-of-4">
-                Col 1 of 4
-            </div>
-            <div class="col-3-of-4">
-                Col 3 of 4
-            </div>
-        </div>
-
-    </div>
-    -->
-
     <!-- Блок Мои работы -->
-    <main class="works-container">
+    <main class="container works-container">
         <div class="row">
             <h2 class="heading">Мои работы</h2>
         </div>
@@ -103,7 +45,7 @@
         <div class="works">
             <div class="row">
                 <!-- Изображение моих работ -->
-                <div class="col-1-of-2 works__screens__container">
+                <div class="col-lg-6 col-md-12 works__screens__container">
                     <div class="works__screens works__screens-active">
                         <img class="works__screens__img works__screens__img--1" src="img/Screenshot_1.jpg" alt="">
                         <img class="works__screens__img works__screens__img--2" src="img/Screenshot_2.jpg" alt="">
@@ -122,7 +64,7 @@
                 </div>
                 
                 <!-- Описание к моим работам -->
-                <div class="col-1-of-2 works__description__container">
+                <div class="col-lg-6 col-md-12 works__description__container">
                     <div class="works__description works__description-active">
                         <div class="works__description_header">
                             Test1
@@ -134,7 +76,7 @@
                         </div>
 
                         <div class="works__description__btns">
-                            <a href="#" class="btn btn-primary">Подробнее</a>
+                            <a href="#1" class="btn_component btn_component-primary">Подробнее</a>
                         </div>
                     </div>
                     
@@ -149,7 +91,7 @@
                         </div>
 
                         <div class="works__description__btns">
-                            <a href="#" class="btn btn-primary">Подробнее</a>
+                            <a href="#2" class="btn_component btn_component-primary">Подробнее</a>
                         </div>
                     </div>
 
@@ -164,7 +106,7 @@
                         </div>
 
                         <div class="works__description__btns">
-                            <a href="#" class="btn btn-primary">Подробнее</a>
+                            <a href="#3" class="btn_component btn_component-primary">Подробнее</a>
                         </div>
                     </div>
                 </div>
@@ -179,5 +121,78 @@
             </div>
         </div>
     </main>
+
+    <!-- Блок обо мне -->
+    <section class="about">
+        <div class="container-fluid about__container">
+            <div class="row about__description__container">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-12 about__description">
+                            <div class="about__description__header-main">
+                                Обо мне
+                            </div>
+
+                            <div class="about__description__paragraph">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam animi in aspernatur amet perspiciatis eaque praesentium voluptate
+                                quae? Aliquam nobis beatae sed aperiam vel delectus ad maiores error eligendi laudantium.
+                            </div>
+
+                            <div class="about__description__header-sub">
+                                Какими технологиями и языками я владею
+                            </div>
+
+                            <div class="about__description__technology__container">
+                                <div class="about__description__technology">
+                                    <span class="about__description__technology__marker"></span>
+                                    <span class="about__description__technology__title">HTML5</span>
+                                </div>
+
+                                <div class="about__description__technology">
+                                    <span class="about__description__technology__marker"></span>
+                                    <span class="about__description__technology__title">CCS3</span>
+                                </div>
+
+                                <div class="about__description__technology">
+                                    <span class="about__description__technology__marker"></span>
+                                    <span class="about__description__technology__title">JavaScript</span>
+                                </div>
+
+                                <div class="about__description__technology">
+                                    <span class="about__description__technology__marker"></span>
+                                    <span class="about__description__technology__title">React</span>
+                                </div>
+
+                                <div class="about__description__technology">
+                                    <span class="about__description__technology__marker"></span>
+                                    <span class="about__description__technology__title">PHP</span>
+                                </div>
+                            </div>
+
+                            <div class="about__description__technology__container">
+                                <div class="about__description__technology">
+                                    <span class="about__description__technology__marker"></span>
+                                    <span class="about__description__technology__title">MySQL</span>
+                                </div>
+
+                                <div class="about__description__technology">
+                                    <span class="about__description__technology__marker"></span>
+                                    <span class="about__description__technology__title">Responsive Design</span>
+                                </div>
+
+                                <div class="about__description__technology">
+                                    <span class="about__description__technology__marker"></span>
+                                    <span class="about__description__technology__title">Photoshop</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            <div class="about__photo">
+                <img src="img/startImage.jpg" alt="Моё фото">
+            </div>
+        </div>
+    </section>
 </body>
 </html>

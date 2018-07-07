@@ -24,7 +24,6 @@ for (let i = 0; i < worksScreens.length; i++) {
 
     worksDescription[i].style.opacity = "0";
     worksDescription[i].style.animation = "none";
-    worksDescription[i].style.right = "-20rem";
 }
 
 /* Вешаем обработчики событий на индикаторы */
