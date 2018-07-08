@@ -14,7 +14,7 @@ const [worksScreens, worksDescription, indicators] = [
     document.getElementsByClassName("works__indicators_dot")
 ]; // Массив элементов, которые необходимо анимировать каруселью
 
-const carouselTick = 10000; // Время на одну итерацию карусели
+const carouselTick = 20000; // Время на одну итерацию карусели
 
 /* Задаём начальный state */
 for (let i = 0; i < worksScreens.length; i++) {

@@ -983,7 +983,7 @@ body {
   display: flex;
   flex-direction: column;
   height: 100vh;
-  background-image: url(img/startImage2.jpg);
+  background-image: url(img/img/startImage.jpg);
   /* Background image */
   background-size: cover;
   background-position: top center;
@@ -1195,19 +1195,23 @@ body {
       color: #b3b3b3; }
   .about__photo {
     position: absolute;
-    width: 100%;
+    width: 50%;
     height: 100%;
     left: 50%;
     top: 0;
     overflow: hidden;
     -webkit-clip-path: polygon(12% 0, 100% 0%, 100% 100%, 0% 100%);
-    clip-path: polygon(12% 0, 100% 0%, 100% 100%, 0% 100%); }
-    .about__photo img {
-      height: 100%; }
+    clip-path: polygon(12% 0, 100% 0%, 100% 100%, 0% 100%);
+    background-image: url(img/img/MyPhoto.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom center; }
 
 @media only screen and (max-width: 1200px) {
   .about {
-    height: 55rem; } }
+    height: 55rem; }
+    .about__photo {
+      width: 100%; } }
 
 @media only screen and (max-width: 992px) {
   .about {
