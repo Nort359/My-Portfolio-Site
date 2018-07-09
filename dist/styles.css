@@ -983,7 +983,7 @@ body {
   display: flex;
   flex-direction: column;
   height: 100vh;
-  background-image: url(img/img/startImage.jpg);
+  background-image: url(./img/startImage.jpg);
   /* Background image */
   background-size: cover;
   background-position: top center;
@@ -1202,7 +1202,7 @@ body {
     overflow: hidden;
     -webkit-clip-path: polygon(12% 0, 100% 0%, 100% 100%, 0% 100%);
     clip-path: polygon(12% 0, 100% 0%, 100% 100%, 0% 100%);
-    background-image: url(img/img/MyPhoto.jpg);
+    background-image: url(./img/MyPhoto.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: bottom center; }

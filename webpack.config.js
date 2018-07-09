@@ -90,9 +90,8 @@ module.exports = {
                     {
                         loader: 'file-loader',
                         options: {
-                            name: '[path][name].[ext]'.replace('img/', ''),
-                            outputPath: 'img/',
-                            publicPath: 'img/'
+                            name: '[path][name].[ext]',
+                            // publicPath: 'img/'
                         }
                     }
                 ]
