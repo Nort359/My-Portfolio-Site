@@ -11,3 +11,17 @@
     padding: $padding;
     text-indent: 30px;
 }
+
+/* Точка в списке */
+@mixin dot {
+    display: inline-block;
+
+    width: 1.5rem;
+    height: 1.5rem;
+
+    border-radius: 50%;
+
+    margin-right: 2rem;
+
+    background-color: $mainColor;
+}

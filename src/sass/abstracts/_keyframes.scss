@@ -1,16 +1,20 @@
+/* CAROUSEL */
 @keyframes showFromLeft {
     0% {
         transform: translateX(-50rem);
         opacity: 0;
     }
+
     50% {
         opacity: 1;
         transform: translateX(0);
     }
+
     75% {
         opacity: 1;
         transform: translateX(-2rem);
     }
+
     100% {
         transform: translateX(0);
     }
@@ -21,12 +25,15 @@
         transform: translateX(50rem);
         opacity: 0;
     }
+
     50% {
         opacity: 1;
         transform: translateX(0);
     }
+
     75% {
         opacity: 1;
+        
         transform: translateX(2rem);
     }
     100% {
@@ -39,8 +46,26 @@
         transform: translateY(0);
         opacity: 1;
     }
+
     100% {
         opacity: 0;
         transform: translateY(50rem);
+    }
+}
+
+/* INPUTS */
+@keyframes ShowInputPlaceholder {
+    0% {
+        top: $inputPaddingHorizontal;
+        transform: scale(0);
+    }
+
+    70% {
+        top: calc(-#{$inputPaddingVertical} * 1.6);
+    }
+
+    100% {
+        top: calc(-#{$inputPaddingVertical} * 1.2);
+        transform: scale(1);
     }
 }

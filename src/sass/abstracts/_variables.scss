@@ -10,6 +10,7 @@ $whiteColor: #fff;
 $mainColor: #4EC2F8;
 
 /* General settings */
+$blockTopMargin: 3rem;
 $width1920px: 192rem; /* Container size */
 $spaces1920px: 27rem; /* Space in the container */
 
@@ -22,3 +23,7 @@ $gutter-horizontal: 6rem;
 
 /* BTN */
 $border-radius: 10rem;
+
+/* INPUTS */
+$inputPaddingHorizontal: 0.5rem;
+$inputPaddingVertical: 2rem;

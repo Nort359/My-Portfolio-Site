@@ -1,65 +1,80 @@
-.btn_component:link,
-.btn_component:visited {
-    text-transform: uppercase;
-    text-decoration: none;
-    text-indent: 0;
+.btn_component {
+    &,
+    &:link,
+    &:visited {
+        display: inline-block;
 
-    padding: 1.5rem 4rem;
-    display: inline-block;
-    border-radius: $border-radius;
-    transition: all .2s ease-in;
-    position: relative;
-    margin: 0 auto;
-}
+        text-transform: uppercase;
+        text-decoration: none;
+        text-indent: 0;
 
-.btn_component:hover {
-    transform: translateY(.3rem);
-    box-shadow: 0 1rem 2rem rgba($fontColor, .2);
-    color: $whiteColor;
-}
+        padding: 1.5rem 4rem;
+        margin: 0 auto;
 
-.btn_component:active {
-    transform: translateY(.1rem);
-    box-shadow: 0 .5rem 1rem rgba($fontColor, .2);
-}
+        border-radius: $border-radius;
 
-.btn_component::after {
-    content: "";
-    display: inline-block;
+        transition: all .2s ease-in;
 
-    height: 100%;
-    width: 100%;
+        position: relative;
+    }
 
-    border-radius: $border-radius;
+    &:hover {
+        transform: translateY(.3rem);
 
-    position: absolute;
-    top: 0;
-    left: 0;
+        box-shadow: 0 1rem 2rem rgba($fontColor, .3);
+        color: $whiteColor;
+    }
 
-    z-index: -1;
-    
-    transition: all .4s ease-in-out;
-}
+    &:active {
+        transform: translateY(.1rem);
 
-.btn_component:hover::after {
-    transform: scale(1.4) scaleY(1.6);
-    opacity: 0;
-}
+        box-shadow: 0 .5rem 1rem rgba($fontColor, .4);
+    }
 
-.btn_component-white {
-    background-color: $whiteColor;
-    color: $fontColor;
-}
+    &::after {
+        content: "";
+        display: inline-block;
 
-.btn_component-white::after {
-    background-color: $whiteColor;
-}
+        height: 100%;
+        width: 100%;
 
-.btn_component-primary {
-    background-color: $mainColor;
-    color: $whiteColor;
-}
+        border-radius: $border-radius;
 
-.btn_component-primary::after {
-    background-color: $mainColor;
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        z-index: -1;
+        
+        transition: all .4s ease-in-out;
+    }
+
+    &:hover::after {
+        transform: scale(1.4) scaleY(1.6);
+        opacity: 0;
+    }
+
+    &-ghost {
+        background-color: $whiteColor;
+        color: $mainColor;
+        border: 2px solid $mainColor;
+
+        &:hover {
+            color: $whiteColor;
+            background-color: $mainColor;
+        }
+
+        &::after {
+            background-color: $mainColor;
+        }
+    }
+
+    &-primary {
+        background-color: $mainColor;
+        color: $whiteColor;
+
+        &::after {
+            background-color: $mainColor;
+        }
+    }
 }

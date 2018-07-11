@@ -8,6 +8,25 @@
     <link rel="shortcut icon" type="image/png" href="img/favicon.png">
 <link href="./styles.css" rel="stylesheet"></head>
 <body>
+
+    <div class="navigation">
+        <input type="checkbox" class="navigation__checkbox" id="navigation_toggle">
+        <label for="navigation_toggle" class="navigation__button">
+            <span class="navigation__icon">&nbsp;</span>
+        </label>
+
+        <div class="navigation__background">&nbsp;</div>
+
+        <nav class="navigation__nav">
+            <ul class="navigation__nav__list">
+                <li class="navigation__nav__list__item"><a href="#" class="navigation__nav__list__item__link">Обо мне</a></li>
+                <li class="navigation__nav__list__item"><a href="#" class="navigation__nav__list__item__link">Мои работы</a></li>
+                <li class="navigation__nav__list__item"><a href="#" class="navigation__nav__list__item__link">Резюме</a></li>
+                <li class="navigation__nav__list__item"><a href="#" class="navigation__nav__list__item__link">Контакты</a></li>
+            </ul>
+        </nav>
+    </div>
+
     <!-- Блок Начальный экран -->
     <header class="header">
         <div class="header__menu">
@@ -17,6 +36,7 @@
             </div>
 
             <!-- Меню -->
+            <!--
             <ul class="header__menu-container">
                 <a href="#" class="header__menu-link_active"><li>Главная</li></a>
                 <a href="#"><li>Обо мне</li></a>
@@ -24,6 +44,7 @@
                 <a href="#"><li>Резюме</li></a>
                 <a href="#"><li>Контакты</li></a>
             </ul>
+            -->
         </div>
         
         <!-- Текст, находящийся по середине экрана -->
@@ -191,9 +212,62 @@
                     </div>
                 </div>
                 
-            <div class="about__photo">
-            </div>
+            <div class="about__photo"></div>
         </div>
     </div></section>
+
+    <section class="write-me">
+        <div class="container">
+            <div class="row">
+                <h2 class="heading">Напишите мне</h2>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-4 write-me__message">
+                    <p>При возникновении ошибки, вы можете написать непосредственно на один моих электронных адресов:</p>
+
+                    <div class="write-me__message__contact">
+                        <span class="write-me__message__marker"></span>
+                        <span class="write-me__message__title"><a href="mailto:Nort359@gmail.com">Nort359@gmail.com</a></span>
+                    </div>
+
+                    <div class="write-me__message__contact">
+                        <span class="write-me__message__marker"></span>
+                        <span class="write-me__message__title"><a href="mailto:AkS-LH@yandex.ru">AkS-LH@yandex.ru</a></span>
+                    </div>
+                </div>
+
+                <form class="col-lg-8 container-fluid">
+                    <div class="row no-gutters">
+                        <div class="col-md-6 write-me__input__container">
+                            <input type="text" placeholder="Ваше имя" class="write-me__input" required="required" pattern="[A-Za-zА-Яа-я]">
+                            <span class="write-me__input__placeholder"></span>
+                            <div class="write-me__input__underline"></div>
+                        </div>
+
+                        <div class="col-md-6 write-me__input__container">
+                            <input type="email" placeholder="Ваш email" class="write-me__input" required="required" pattern="^[-._a-z0-9]+@(?:[a-z0-9][-a-z0-9]+\.)+[a-z]{2,6}$">
+                            <span class="write-me__input__placeholder"></span>
+                            <div class="write-me__input__underline"></div>
+                        </div>
+
+                        <div class="col-md-12 write-me__input__container">
+                            <input type="text" placeholder="Ваше сообщение" class="write-me__input" required="required">
+                            <span class="write-me__input__placeholder"></span>
+                            <div class="write-me__input__underline"></div>
+                        </div>
+
+                        <div class="col-md-6 write-me__button">
+                            <a href="" class="btn_component btn_component-primary">Отправить</a>
+                        </div>
+
+                        <div class="col-md-6 write-me__button">
+                            <a href="" class="btn_component btn_component-ghost">Сбросить</a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
 <script type="text/javascript" src="./bundle.js"></script></body>
 </html>

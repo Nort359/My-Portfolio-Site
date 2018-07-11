@@ -864,6 +864,9 @@ template {
 /* Space in the container */
 /* GRID */
 /* BTN */
+/* INPUTS */
+/* Точка в списке */
+/* CAROUSEL */
 @keyframes showFromLeft {
   0% {
     transform: translateX(-50rem);
@@ -898,6 +901,17 @@ template {
     opacity: 0;
     transform: translateY(50rem); } }
 
+/* INPUTS */
+@keyframes ShowInputPlaceholder {
+  0% {
+    top: 0.5rem;
+    transform: scale(0); }
+  70% {
+    top: calc(-2rem * 1.6); }
+  100% {
+    top: calc(-2rem * 1.2);
+    transform: scale(1); } }
+
 /* Reset default values */
 *,
 *::after,
@@ -926,26 +940,25 @@ body {
   text-align: center;
   font-size: 3.8rem; }
 
-.btn_component:link,
-.btn_component:visited {
+.btn_component, .btn_component:link, .btn_component:visited {
+  display: inline-block;
   text-transform: uppercase;
   text-decoration: none;
   text-indent: 0;
   padding: 1.5rem 4rem;
-  display: inline-block;
+  margin: 0 auto;
   border-radius: 10rem;
   transition: all .2s ease-in;
-  position: relative;
-  margin: 0 auto; }
+  position: relative; }
 
 .btn_component:hover {
   transform: translateY(0.3rem);
-  box-shadow: 0 1rem 2rem rgba(35, 35, 35, 0.2);
+  box-shadow: 0 1rem 2rem rgba(35, 35, 35, 0.3);
   color: #fff; }
 
 .btn_component:active {
   transform: translateY(0.1rem);
-  box-shadow: 0 0.5rem 1rem rgba(35, 35, 35, 0.2); }
+  box-shadow: 0 0.5rem 1rem rgba(35, 35, 35, 0.4); }
 
 .btn_component::after {
   content: "";
@@ -963,28 +976,127 @@ body {
   transform: scale(1.4) scaleY(1.6);
   opacity: 0; }
 
-.btn_component-white {
+.btn_component-ghost {
   background-color: #fff;
-  color: #232323; }
-
-.btn_component-white::after {
-  background-color: #fff; }
+  color: #4EC2F8;
+  border: 2px solid #4EC2F8; }
+  .btn_component-ghost:hover {
+    color: #fff;
+    background-color: #4EC2F8; }
+  .btn_component-ghost::after {
+    background-color: #4EC2F8; }
 
 .btn_component-primary {
   background-color: #4EC2F8;
   color: #fff; }
-
-.btn_component-primary::after {
-  background-color: #4EC2F8; }
+  .btn_component-primary::after {
+    background-color: #4EC2F8; }
 
 /* @import "layout/grid"; */
+.navigation {
+  /* Functionality */
+  /* Icon */ }
+  .navigation__checkbox {
+    display: none; }
+  .navigation__button {
+    background-color: #fff;
+    height: 7rem;
+    width: 7rem;
+    border-radius: 50%;
+    position: fixed;
+    top: 6rem;
+    right: 6rem;
+    z-index: 2000;
+    box-shadow: 0 1rem 3rem rgba(35, 35, 35, 0.2);
+    cursor: pointer; }
+  .navigation__background {
+    height: 6rem;
+    width: 6rem;
+    border-radius: 50%;
+    position: fixed;
+    top: 6.5rem;
+    right: 6.5rem;
+    background-image: radial-gradient(#7fd3fa, #055275);
+    z-index: 1000;
+    transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1); }
+  .navigation__nav {
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1500;
+    opacity: 0;
+    width: 0;
+    transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55); }
+    .navigation__nav__list {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 100%;
+      text-align: center;
+      list-style: none; }
+      .navigation__nav__list__item {
+        margin: 1rem; }
+        .navigation__nav__list__item__link:link, .navigation__nav__list__item__link:visited {
+          display: inline-block;
+          font-size: 3rem;
+          font-weight: 300;
+          padding: 1rem 2rem;
+          color: #fff;
+          text-decoration: none;
+          text-transform: uppercase;
+          background-image: linear-gradient(120deg, transparent 0%, transparent 50%, #fff 50%);
+          background-size: 240%;
+          transition: all .4s ease-in-out; }
+        .navigation__nav__list__item__link:hover, .navigation__nav__list__item__link:active {
+          background-position: 100%;
+          color: #4EC2F8;
+          transform: translateX(1rem); }
+  .navigation__checkbox:checked ~ .navigation__background {
+    transform: scale(80); }
+  .navigation__checkbox:checked ~ .navigation__nav {
+    opacity: 1;
+    width: 100%; }
+  .navigation__icon {
+    position: relative;
+    margin-top: 3.5rem;
+    margin-left: 2rem; }
+    .navigation__icon, .navigation__icon::before, .navigation__icon::after {
+      display: inline-block;
+      width: 3rem;
+      height: 2px;
+      background-color: #232323; }
+    .navigation__icon::before, .navigation__icon::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      transition: all .2s; }
+    .navigation__icon::before {
+      top: -.8rem; }
+    .navigation__icon::after {
+      top: .8rem; }
+  .navigation__button:hover .navigation__icon::before {
+    top: -1rem; }
+  .navigation__button:hover .navigation__icon::after {
+    top: 1rem; }
+  .navigation__checkbox:checked + .navigation__button .navigation__icon {
+    background-color: transparent; }
+  .navigation__checkbox:checked + .navigation__button .navigation__icon::before {
+    top: 0;
+    transform: rotate(135deg); }
+  .navigation__checkbox:checked + .navigation__button .navigation__icon::after {
+    top: 0;
+    transform: rotate(-135deg); }
+
 /* --- A start screen block HEADER --- */
 .header {
   display: flex;
   flex-direction: column;
   height: 100vh;
-  background-image: url(./img/startImage.jpg);
   /* Background image */
+  background-image: url(./img/startImage.jpg);
   background-size: cover;
   background-position: top center;
   /* Logo styles */
@@ -1053,7 +1165,7 @@ body {
   /* Индикаторы переключения слайдов карусели */ }
   .works-container {
     text-align: center;
-    margin: 30px auto; }
+    margin: 3rem auto; }
   .works__screens {
     text-align: justify;
     padding: 1.5rem;
@@ -1159,8 +1271,7 @@ body {
   color: #fff;
   width: 100%;
   height: 48rem;
-  margin-top: 8rem;
-  margin-bottom: 50rem; }
+  margin-top: 8rem; }
   .about__container {
     position: relative;
     overflow: hidden;
@@ -1239,6 +1350,78 @@ body {
 @media only screen and (max-width: 430px) {
   .about {
     height: 135rem; } }
+
+.write-me {
+  margin-top: 3rem;
+  margin-bottom: 20rem; }
+  .write-me__message {
+    text-align: justify;
+    margin-bottom: 3rem; }
+    .write-me__message__marker {
+      display: inline-block;
+      width: 1.5rem;
+      height: 1.5rem;
+      border-radius: 50%;
+      margin-right: 2rem;
+      background-color: #4EC2F8; }
+    .write-me__message__contact a, .write-me__message__contact a:visited, .write-me__message__contact a:active {
+      color: #232323;
+      text-decoration: none;
+      transition: color .3 ease-in-out; }
+    .write-me__message__contact a:hover {
+      color: #4EC2F8; }
+  .write-me__input {
+    padding: 0.5rem 2rem 0.5rem 0;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid rgba(35, 35, 35, 0.5);
+    width: 100%;
+    position: relative;
+    top: 0;
+    left: 0;
+    /*
+        &:focus:invalid:not(:placeholder-shown) ~ &__underline {
+            transform: scale(1);
+            background-color: red;
+        }
+        */ }
+    .write-me__input__container {
+      position: relative;
+      margin-bottom: 3rem;
+      border-right: 2rem solid transparent;
+      justify-content: space-between; }
+    .write-me__input__placeholder {
+      display: none;
+      position: absolute;
+      top: 0.5rem;
+      left: 0;
+      transition: all .3s ease-in-out; }
+    .write-me__input__underline {
+      background-color: #4EC2F8;
+      width: 100%;
+      height: 3px;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      transition: transform .3s ease-in-out;
+      transform: scale(0); }
+    .write-me__input:focus ~ .write-me__input__placeholder {
+      display: inline;
+      animation: ShowInputPlaceholder .3s;
+      top: calc(-2rem * 1.2);
+      color: #4EC2F8;
+      font-size: calc(1.8rem - .2rem);
+      font-style: italic; }
+    .write-me__input:focus ~ .write-me__input__underline {
+      transform: scale(1); }
+  .write-me__button {
+    text-align: right;
+    margin-bottom: 1rem; }
+
+@media only screen and (max-width: 767px) {
+  .write-me__button > .btn_component {
+    width: 100%;
+    text-align: center; } }
 
 ::-webkit-scrollbar {
   width: 0.5em;
