@@ -34,14 +34,22 @@ const StylesUnderline = function(backgroundColor, transform) {
     this.transform = `scale(${transform})`;
 }
 
+// Стили для underline при событии input (change)
 const stylesOnChange = {
     valid: new StylesUnderline(greenColor, 1),
     invalid: new StylesUnderline(redColor, 1),
     byDefault: new StylesUnderline(mainColor, 1)
-}
+};
 
-const stylesOnBlur = Object.create(stylesOnChange);
-stylesOnBlur.valid = new StylesUnderline(greenColor, 0);
+// Стили для underline при событии focus
+const stylesOnFocus = Object.assign(stylesOnChange);
+
+// Стили для underline при событии blur
+const stylesOnBlur = {
+    valid: new StylesUnderline(greenColor, 0),
+    invalid: new StylesUnderline(redColor, 1),
+    byDefault: new StylesUnderline(mainColor, 0)
+};
 
 /**
  * Преобразовывает объект стилей в строку стилей
@@ -105,6 +113,9 @@ for (let i = 0; i < inputContainer.length; i++) {
 
     // Прикрепляем событие onInput (change) на каждый input
     input.addEventListener("input", event => onInputHandler(event, underline, stylesOnChange));
+
+    // Прикрепляем событие onFocus на каждый input
+    input.addEventListener("focus", event => onInputHandler(event, underline, stylesOnFocus));
 
     // Прикрепляем событие onBlur на каждый input
     input.addEventListener("blur", event => onInputHandler(event, underline, stylesOnBlur));
