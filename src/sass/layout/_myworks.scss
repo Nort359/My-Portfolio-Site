@@ -2,7 +2,7 @@
 
 .works {
     justify-content: space-between;
-    height: 32rem;
+    height: 42rem;
 
     &-container {
         text-align: center;
@@ -103,7 +103,7 @@
             position: relative;
         }
 
-        &_header {
+        &__header {
             font-size: 1.8rem;
             font-weight: 700;
 
@@ -111,11 +111,23 @@
             text-align: center;
         }
 
-        &_paragraph {
+        &__paragraph {
             font-size: 1.8rem;
             
             &:not(:last-child) {
                 margin-bottom: 3rem;
+            }
+        }
+
+        &__link {
+            &,
+            &:visited,
+            &:active {
+                display: block;
+
+                color: $mainColor;
+                text-decoration: none;
+                text-indent: 0;
             }
         }
 
@@ -150,7 +162,7 @@
     }
 }
 
-@media only screen and (max-width: 1040px) {
+@media only screen and (max-width: 993px) {
     .works {
         height: 70rem;
         
@@ -164,5 +176,23 @@
             top: 35rem;
         }
 
+    }
+}
+
+@media only screen and (max-width: 760px) {
+    .works {
+        height: 80rem;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .works {
+        height: 82rem;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .works {
+        height: 85rem;
     }
 }

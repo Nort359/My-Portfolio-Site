@@ -1,0 +1,17 @@
+.footer {
+    background-color: $fontColor;
+    color: $whiteColor;
+
+    margin-top: 5rem;
+
+    &__descrition {
+        margin: $blockTopMargin auto;
+        text-indent: 3rem;
+    }
+
+    &__copyright{
+        color: $whiteColor;
+        background-color: lighten($fontColor, 5%);
+        width: 100%;
+    }
+}

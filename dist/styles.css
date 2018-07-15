@@ -1161,7 +1161,7 @@ body {
 /* My works block */
 .works {
   justify-content: space-between;
-  height: 32rem;
+  height: 42rem;
   /* Индикаторы переключения слайдов карусели */ }
   .works-container {
     text-align: center;
@@ -1229,15 +1229,20 @@ body {
           z-index: 25 !important; }
     .works__description__container {
       position: relative; }
-    .works__description_header {
+    .works__description__header {
       font-size: 1.8rem;
       font-weight: 700;
       text-transform: uppercase;
       text-align: center; }
-    .works__description_paragraph {
+    .works__description__paragraph {
       font-size: 1.8rem; }
-      .works__description_paragraph:not(:last-child) {
+      .works__description__paragraph:not(:last-child) {
         margin-bottom: 3rem; }
+    .works__description__link, .works__description__link:visited, .works__description__link:active {
+      display: block;
+      color: #4EC2F8;
+      text-decoration: none;
+      text-indent: 0; }
     .works__description__btns {
       text-align: center; }
   .works__indicators {
@@ -1256,7 +1261,7 @@ body {
         background-color: #4EC2F8;
         transform: scale(1.2); }
 
-@media only screen and (max-width: 1040px) {
+@media only screen and (max-width: 993px) {
   .works {
     height: 70rem; }
     .works__screens {
@@ -1265,6 +1270,18 @@ body {
     .works__description {
       position: absolute;
       top: 35rem; } }
+
+@media only screen and (max-width: 760px) {
+  .works {
+    height: 80rem; } }
+
+@media only screen and (max-width: 450px) {
+  .works {
+    height: 82rem; } }
+
+@media only screen and (max-width: 400px) {
+  .works {
+    height: 85rem; } }
 
 .about {
   background-color: #232323;
@@ -1352,8 +1369,7 @@ body {
     height: 135rem; } }
 
 .write-me {
-  margin-top: 3rem;
-  margin-bottom: 20rem; }
+  margin-top: 3rem; }
   .write-me__message {
     text-align: justify;
     margin-bottom: 3rem; }
@@ -1422,6 +1438,24 @@ body {
   .write-me__button > .btn_component {
     width: 100%;
     text-align: center; } }
+
+.contacts__header {
+  font-size: 1.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: left; }
+
+.footer {
+  background-color: #232323;
+  color: #fff;
+  margin-top: 5rem; }
+  .footer__descrition {
+    margin: 3rem auto;
+    text-indent: 3rem; }
+  .footer__copyright {
+    color: #fff;
+    background-color: #303030;
+    width: 100%; }
 
 ::-webkit-scrollbar {
   width: 0.5em;
